@@ -15,11 +15,11 @@ Este taller consiste en implementar una arquitectura IoT con 5 tópicos previame
 ## Configuración y Responsabilidades
 A continuación, se detalla la configuración de tópicos seleccionada, los responsables de su desarrollo y la correspondencia con el código fuente publicado:
 * TÓPICO - RESPONSABLE - DIRECTORIO
-* Tópico Temperatura - Juvenal - temperatura
-* Tópico Corriente - Carlos - corriente
-* Tópico Luz - Martin - lumens
-* Tópico Voltaje - Cristian - voltaje
-* Topico Ubicación - David - adjust_lighting
+* Temperatura - Juvenal - temperatura
+* Corriente - Carlos - corriente
+* Luz - Martin - lumens
+* Voltaje - Cristian - voltaje
+* Ubicación - David - adjust_lighting
 
 ## Paso a paso Implementación
 Para poner en ejecución la aplicación junto con cada uno de sstópicos, se recomienda efectuar los siguientes pasos sobre una máquina virtual en EC2 de AWS:
