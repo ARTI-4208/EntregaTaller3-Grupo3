@@ -1,6 +1,16 @@
 # EntregaTaller3-Grupo3
 
 ## Contexto
+Este taller consiste en implementar una arquitectura IoT con 5 tópicos previamente definidos. Para lograr dicha interacción, es necesario contar con las siguientes herramientas:
+
+* Arduino
+* Library Firmata
+* Library Johnny-Five
+* Nodejs
+* MQTT (mosquitto)
+* Kafka
+* Zookeeper
+* Redis
 
 ## Configuración y Responsabilidades
 A continuación, se detalla la configuración de tópicos seleccionada, los responsables de su desarrollo y la correspondencia con el código fuente publicado:
