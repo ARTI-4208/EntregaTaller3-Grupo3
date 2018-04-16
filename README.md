@@ -37,7 +37,7 @@ Se ejecuta:
 ```sh
 nodejs bridge_kafka_mosquitto.js
 ```
-### Kafka consumer
+### REDIS - KAFKA Consumer
 Vamos a ejecutar una aplicación que estará escuchando de kafka y almacenará el dato que llegue en un servidor de redis en nuestra instancia. Antes que nada, ubíquese sobre la carpeta de redis e instale el servidor
 ```sh
 cd redis-stable/utils
@@ -50,7 +50,7 @@ Ejecutamos la aplicación que consumirá de kafka:
 ```sh
 nodejs kafka_consumer.js
 ```
-## SocketIO
+### SocketIO
 Ejecutaremos nuestro servidor de Socket IO. La aplicación que se ejecutará se conectará a redis en modo de suscriptor y publicará a todos los clientes conectados.
 ```sh
 nodejs index.js
