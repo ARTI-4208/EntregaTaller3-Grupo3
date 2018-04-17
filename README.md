@@ -28,10 +28,10 @@ Para poner en ejecución la aplicación junto con cada uno de sstópicos, se rec
 Nos suscribimos a un nuevo tópico con el nombre correspondiente
 ```sh
 mosquitto_sub -d -t Temperatura
-mosquitto_sub -d -t Corriente
-mosquitto_sub -d -t Luz
-mosquitto_sub -d -t Voltaje
-mosquitto_sub -d -t Ubicacion
+mosquitto_sub -d -t Current
+mosquitto_sub -d -t Lumens
+mosquitto_sub -d -t Voltage
+mosquitto_sub -d -t Locate
 ```
 ### KAFKA
 Se deja en ejecución nuestro bridge de mosquitto a kafka. Primero nos ubicamos en la carpeta de kafka:
@@ -46,10 +46,10 @@ nohup bin/kafka-server-start.sh config/server.properties &
 Creamos un nuevo tópico con el nombre correspondiente
 ```sh
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Temperatura
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Corriente
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Luz
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Voltaje
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Ubicacion
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Current
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Lumens
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Voltage
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Locate
 ```
 Se ejecuta:
 ```sh
