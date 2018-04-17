@@ -25,9 +25,13 @@ A continuación, se detalla la configuración de tópicos seleccionada, los resp
 Para poner en ejecución la aplicación junto con cada uno de sstópicos, se recomienda efectuar los siguientes pasos sobre una máquina virtual en EC2 de AWS:
 
 ### MOSQUITTO
-Nos suscribimos a un nuevo tópico con el nombre numbers
+Nos suscribimos a un nuevo tópico con el nombre correspondiente
 ```sh
-mosquitto_sub -d -t numbers
+mosquitto_sub -d -t Temperatura
+mosquitto_sub -d -t Corriente
+mosquitto_sub -d -t Luz
+mosquitto_sub -d -t Voltaje
+mosquitto_sub -d -t Ubicacion
 ```
 ### KAFKA
 Se deja en ejecución nuestro bridge de mosquitto a kafka. Primero nos ubicamos en la carpeta de kafka:
@@ -39,9 +43,13 @@ nohup bin/zookeeper-server-start.sh config/zookeeper.properties &
 
 nohup bin/kafka-server-start.sh config/server.properties &
 ```
-Creamos un nuevo tópico con el nombre "nombre_del_tópico"
+Creamos un nuevo tópico con el nombre correspondiente
 ```sh
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic numbers
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Temperatura
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Corriente
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Luz
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Voltaje
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Ubicacion
 ```
 Se ejecuta:
 ```sh
