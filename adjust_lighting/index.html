@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ejemplo real-time</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font: 13px Helvetica, Arial; }
+        form { background: #bbbbbb; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+        form .form-control { border: 0; padding: 10px; width: 100%; margin-right: .5%; }
+        form button { width: 9%;padding: 10px; }
+        #stream-data { list-style-type: none; margin: 0; padding: 0; }
+        #stream-data li { padding: 10px 15px; }
+        #stream-data li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <div class="col-md-12">
+        <h2>
+            <i class="glyphicon glyphicon-random"></i>
+            Real Time Data
+        </h2>
+        <ul id="stream-data"></ul>
+    </div>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        // Usuario actual
+        var number = 0;
+
+        // Abre conexión bi-direccional con el servidor
+        var socket = io();
+
+        // En el momento en que llegue un mensaje del tópico 'chat message' ejecuta la función
+        socket.on('stream', function(msg){
+
+            // Agrega un nuevo mensaje a la lista de mensajes
+            var message = msg.split(';@')[0];
+            $('#stream-data').prepend($('<li>').text('Data: ' + message + ' time: ' + new Date()));
+			window.scrollTo(0, document.body.scrollHeight);
+        });
+
+    </script>
+  </body>
+</html>
