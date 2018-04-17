@@ -1,8 +1,8 @@
 {
-  "name": "Locate",
+  "name": "Voltage",
   "version": "1.0.0",
-  "description": "Components to deploy real time example: bridge mosquitto-kafka, kafka consumer, GUI component",
-  "author": "David Ernesto Paniagua",
+  "description": "Topic Voltage",
+  "author": "Cristian Alfonso",
   "dependencies": {
     "mqtt": "^1.7.3",
     "amqplib":"*",
