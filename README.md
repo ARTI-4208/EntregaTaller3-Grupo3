@@ -37,7 +37,8 @@ mosquitto_sub -d -t Locate
 Se deja en ejecución nuestro bridge de mosquitto a kafka. Primero nos ubicamos en la carpeta de kafka:
 ```sh
 cd kafka_2.11-1.1.0/
---Ejecutamos zookeeper y kafka en background
+
+##Ejecutamos zookeeper y kafka en background
 
 nohup bin/zookeeper-server-start.sh config/zookeeper.properties & 
 
