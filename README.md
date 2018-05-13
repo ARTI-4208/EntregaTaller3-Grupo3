@@ -22,7 +22,7 @@ A continuación, se detalla la configuración de tópicos seleccionada, los resp
 * Ubicación - David - adjust_lighting
 
 ## Paso a paso Implementación
-Para poner en ejecución la aplicación junto con cada uno de sstópicos, se recomienda efectuar los siguientes pasos sobre una máquina virtual en EC2 de AWS:
+Para poner en ejecución la aplicación junto con cada uno de los stópicos, se recomienda efectuar los siguientes pasos sobre una máquina virtual en EC2 de AWS:
 
 ### MOSQUITTO
 Nos suscribimos a un nuevo tópico con el nombre correspondiente
